@@ -1,0 +1,18 @@
+
+
+
+build
+
+docker-compose build
+or
+docker-compose up --build
+
+run
+
+docker-compose up
+
+test
+
+curl -d '{"a":"a"}' localhost:81
+
+
