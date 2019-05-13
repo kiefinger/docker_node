@@ -1,0 +1,10 @@
+
+build
+docker image --tag dnw:latest .
+
+run
+docker run -p 1337:1337 -it --rm -v "$(pwd)"/app:/app hnw:latest 
+
+test
+curl -d '{"a":"a"}' localhost:1337 
+
