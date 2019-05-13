@@ -1,0 +1,11 @@
+FROM node:8.16.0
+#RUN groupadd -r ugis && useradd -r -g ugis ugis
+COPY package.json ./
+COPY app ./app
+RUN npm install -g mocha --save-dev
+RUN npm install
+WORKDIR /app
+EXPOSE 1337
+ENTRYPOINT [ "/bin/sh" , "-c"  ]
+CMD [ "node index.js"]
+

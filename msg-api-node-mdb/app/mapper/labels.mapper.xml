@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "labels">  
+  <insert id = "create">
+    INSERT INTO 
+      DB2C.UTLD_LABELVALUES
+      (LVLD_APPL_CODE, LVLD_LBEL_LOCALE, LVLD_LBEL_KEY, LVLD_LBEL_VALUE)
+    VALUES
+      (#{applCode}, #{labelLocale}, #{labelKey}, #{labelValue});
+  </insert>
+  <select id = "getByApplCode">
+    SELECT
+    		LABELS.LVLD_APPL_CODE AS applCode,
+			TRIM(LABELS.LVLD_LBEL_KEY) AS labelKey,
+			LABELS.LVLD_LBEL_LOCALE AS labelLocale,
+			TRIM(LABELS.LVLD_LBEL_VALUE) AS labelValue
+    FROM
+      DB2C.UTLD_LABELVALUES AS LABELS
+    WHERE
+      LVLD_APPL_CODE = #{applCode}
+  </select>
+  <select id = "getById">
+    SELECT  
+    		LABELS.LVLD_APPL_CODE AS applCode,
+			TRIM(LABELS.LVLD_LBEL_KEY) AS labelKey,
+			LABELS.LVLD_LBEL_LOCALE AS labelLocale,
+			TRIM(LABELS.LVLD_LBEL_VALUE) AS labelValue
+    FROM
+      DB2C.UTLD_LABELVALUES AS LABELS
+    WHERE
+      LVLD_APPL_CODE = #{applCode} AND
+      LVLD_LBEL_LOCALE = #{labelLocale} AND
+      LVLD_LBEL_KEY = #{labelKey};
+  </select>
+  <delete id = "delete">
+    DELETE FROM
+      DB2C.UTLD_LABELVALUES
+    WHERE
+      LVLD_APPL_CODE = #{applCode} AND
+      LVLD_LBEL_LOCALE = #{labelLocale} AND
+      LVLD_LBEL_KEY = #{labelKey};
+  </delete>
+</mapper>

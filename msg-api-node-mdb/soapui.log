@@ -1,0 +1,18 @@
+2019-05-06 11:30:12,708 INFO  [DefaultSoapUICore] initialized soapui-settings from [D:\Users\P858098\soapui-settings.xml]
+2019-05-06 11:30:14,615 INFO  [PluginManager] 0 plugins loaded in 3 ms
+2019-05-06 11:30:14,616 INFO  [DefaultSoapUICore] All plugins loaded
+2019-05-06 11:30:14,951 INFO  [SoapUITestCaseRunner] Enabling UI Components
+2019-05-06 11:30:15,854 INFO  [WsdlProject] Loaded project from [file:/C:/Projects/x2u/x2u-mvn-srv-jee6-5/Project-2-soapui-project.xml]
+2019-05-06 11:30:15,872 INFO  [SoapUITestCaseRunner] Running SoapUI tests in project [Project 2]
+2019-05-06 11:30:15,876 INFO  [SoapUITestCaseRunner] Running TestSuite [Project 2 TestSuite], runType = SEQUENTIAL
+2019-05-06 11:30:15,927 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [/labels TestCase]
+2019-05-06 11:30:15,940 INFO  [SoapUITestCaseRunner] running step [Request 2 - POST]
+2019-05-06 11:30:16,762 INFO  [SoapUITestCaseRunner] running step [Request 3 - PUT]
+2019-05-06 11:30:16,794 INFO  [SoapUITestCaseRunner] running step [Request 1 - GET]
+2019-05-06 11:30:17,028 INFO  [SoapUITestCaseRunner] Assertion [Contains] has status VALID
+2019-05-06 11:30:17,029 INFO  [SoapUITestCaseRunner] running step [Request 4 - DEL]
+2019-05-06 11:30:17,094 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [/labels TestCase], time taken: 810ms, status: FINISHED
+2019-05-06 11:30:17,096 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [/{applCode}/{locale} TestCase]
+2019-05-06 11:30:17,101 INFO  [SoapUITestCaseRunner] running step [Request 1]
+2019-05-06 11:30:17,245 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [/{applCode}/{locale} TestCase], time taken: 135ms, status: FINISHED
+2019-05-06 11:30:17,247 INFO  [SoapUITestCaseRunner] TestSuite [Project 2 TestSuite] finished with status [FINISHED] in 1357ms
