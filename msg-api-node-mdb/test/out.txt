@@ -1,0 +1,230 @@
+
+> utl-api-node-mdb@1.0.0 test /home/josef/docker/node/docker_node/msg-api-node-mdb
+> mocha --ui bdd -timeout 1000
+
+
+
+  Labels
+setup
+Starting app
+Initializeing database module
+Connecting to database
+Connected to mongodb://localhost:27017/test
+setup ende
+app die zweiter -------------------------------
+Promise { <pending> }
+app die zweiter -------------------------------
+    /GET labels
+Init web server modle 
+Web Server listening on localhost: 1337
+-------------- app ----------------------
+{ [EventEmitter: app]
+  domain: undefined,
+  _events: { mount: [Function: onmount] },
+  _maxListeners: undefined,
+  setMaxListeners: [Function: setMaxListeners],
+  getMaxListeners: [Function: getMaxListeners],
+  emit: [Function: emit],
+  addListener: [Function: addListener],
+  on: [Function: addListener],
+  prependListener: [Function: prependListener],
+  once: [Function: once],
+  prependOnceListener: [Function: prependOnceListener],
+  removeListener: [Function: removeListener],
+  removeAllListeners: [Function: removeAllListeners],
+  listeners: [Function: listeners],
+  listenerCount: [Function: listenerCount],
+  eventNames: [Function: eventNames],
+  init: [Function: init],
+  defaultConfiguration: [Function: defaultConfiguration],
+  lazyrouter: [Function: lazyrouter],
+  handle: [Function: handle],
+  use: [Function: use],
+  route: [Function: route],
+  engine: [Function: engine],
+  param: [Function: param],
+  set: [Function: set],
+  path: [Function: path],
+  enabled: [Function: enabled],
+  disabled: [Function: disabled],
+  enable: [Function: enable],
+  disable: [Function: disable],
+  acl: [Function],
+  bind: [Function],
+  checkout: [Function],
+  connect: [Function],
+  copy: [Function],
+  delete: [Function],
+  get: [Function],
+  head: [Function],
+  link: [Function],
+  lock: [Function],
+  'm-search': [Function],
+  merge: [Function],
+  mkactivity: [Function],
+  mkcalendar: [Function],
+  mkcol: [Function],
+  move: [Function],
+  notify: [Function],
+  options: [Function],
+  patch: [Function],
+  post: [Function],
+  propfind: [Function],
+  proppatch: [Function],
+  purge: [Function],
+  put: [Function],
+  rebind: [Function],
+  report: [Function],
+  search: [Function],
+  subscribe: [Function],
+  trace: [Function],
+  unbind: [Function],
+  unlink: [Function],
+  unlock: [Function],
+  unsubscribe: [Function],
+  all: [Function: all],
+  del: [Function],
+  render: [Function: render],
+  listen: [Function: listen],
+  request: IncomingMessage { app: [Circular] },
+  response: ServerResponse { app: [Circular] },
+  cache: {},
+  engines: {},
+  settings: 
+   { 'x-powered-by': true,
+     etag: 'weak',
+     'etag fn': [Function: generateETag],
+     env: 'development',
+     'query parser': 'extended',
+     'query parser fn': [Function: parseExtendedQueryString],
+     'subdomain offset': 2,
+     'trust proxy': false,
+     'trust proxy fn': [Function: trustNone],
+     view: [Function: View],
+     views: '/home/josef/docker/node/docker_node/msg-api-node-mdb/views',
+     'jsonp callback name': 'callback' },
+  _eventsCount: 1,
+  locals: 
+   { settings: 
+      { 'x-powered-by': true,
+        etag: 'weak',
+        'etag fn': [Function: generateETag],
+        env: 'development',
+        'query parser': 'extended',
+        'query parser fn': [Function: parseExtendedQueryString],
+        'subdomain offset': 2,
+        'trust proxy': false,
+        'trust proxy fn': [Function: trustNone],
+        view: [Function: View],
+        views: '/home/josef/docker/node/docker_node/msg-api-node-mdb/views',
+        'jsonp callback name': 'callback' } },
+  mountpath: '/',
+  _router: 
+   { [Function: router]
+     params: {},
+     _params: [],
+     caseSensitive: false,
+     mergeParams: undefined,
+     strict: false,
+     stack: 
+      [ [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object] ] } }
+eof-------------- app ----------------------
+      1)  it should get all labels
+Database created!
+MongoClient {
+  domain: null,
+  _events: {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  s: 
+   { url: 'mongodb://localhost:27017/test',
+     options: 
+      { servers: [Array],
+        caseTranslate: true,
+        useNewUrlParser: true,
+        dbName: 'test',
+        socketTimeoutMS: 360000,
+        connectTimeoutMS: 30000,
+        promiseLibrary: [Function: Promise] },
+     promiseLibrary: [Function: Promise],
+     dbCache: {},
+     sessions: [] },
+  topology: 
+   Server {
+     domain: null,
+     _events: 
+      { serverOpening: [Function],
+        serverDescriptionChanged: [Function],
+        serverHeartbeatStarted: [Function],
+        serverHeartbeatSucceeded: [Function],
+        serverHeartbeatFailed: [Function],
+        serverClosed: [Function],
+        topologyOpening: [Function],
+        topologyClosed: [Function],
+        topologyDescriptionChanged: [Function],
+        commandStarted: [Function],
+        commandSucceeded: [Function],
+        commandFailed: [Function],
+        joined: [Function],
+        left: [Function],
+        ping: [Function],
+        ha: [Function],
+        authenticated: [Function],
+        error: [Function],
+        timeout: [Function],
+        close: [Function],
+        parseError: [Function],
+        open: [Object],
+        fullsetup: [Object],
+        all: [Object],
+        reconnect: [Function] },
+     _eventsCount: 25,
+     _maxListeners: Infinity,
+     clientInfo: 
+      { driver: [Object],
+        os: [Object],
+        platform: 'Node.js v8.10.0, LE' },
+     s: 
+      { coreTopology: [Object],
+        sCapabilities: null,
+        clonedOptions: [Object],
+        reconnect: true,
+        emitError: true,
+        poolSize: 5,
+        storeOptions: [Object],
+        store: [Object],
+        host: 'localhost',
+        port: 27017,
+        options: [Object],
+        sessionPool: [Object],
+        sessions: [],
+        promiseLibrary: [Function: Promise] } } }
+
+
+  0 passing (57ms)
+  1 failing
+
+  1) Labels
+       /GET labels
+          it should get all labels:
+     TypeError: app.address is not a function
+      at serverAddress (node_modules/chai-http/lib/request.js:282:18)
+      at new Test (node_modules/chai-http/lib/request.js:271:53)
+      at Object.obj.(anonymous function) [as get] (node_modules/chai-http/lib/request.js:239:14)
+      at Context.it (test/label.js:31:5)
+
+
+
+Received SIGINT
+Closing database module
+Shutting down web server
+Closing web server module
+Exiting process

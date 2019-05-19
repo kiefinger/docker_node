@@ -2,9 +2,10 @@
   "name": "utl-api-node-mdb",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app/index.js",
   "scripts": {
-    "test": "mocha --ui tdd -timeout 1000",
+    "test2": "mocha --ui tdd -timeout 1000 test2", 
+    "test": "mocha --ui bdd -timeout 1000", 
     "start": "nodemon app/index.js"
   },
   "author": "josef.kiefinger@unicredit.de",
@@ -20,6 +21,8 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.1.4",
     "nodemon": "^1.18.10"
   }
 }

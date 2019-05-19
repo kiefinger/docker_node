@@ -23,7 +23,7 @@ const query = (req, response) => {
 	
     database.getDb().collection("lables").find().toArray(function(err, result) {
         if (err) throw err;
-        console.log(result);
+        //console.log(result);
         response.setHeader('Content-Type', 'application/json');
         response.end(JSON.stringify( result));
     	});
@@ -80,8 +80,8 @@ const create = (req, response) => {
     database.getDb().collection("lables").insertOne(label, function(err, result) {
         if (err) throw err;
         console.log("1 document inserted");
-        console.log(result);
-        response.status(201).end();
+        response.setHeader('Content-Type', 'application/json');
+        response.status(201).send(JSON.stringify( label));
     	});
 }
 
@@ -100,20 +100,20 @@ const update = (req, response) => {
     database.getDb().collection("lables").update(query, label, function(err, result) {
         if (err) throw err;
         console.log("1 document updated");
-        console.log(result);
-        response.status(201).end();
+        //console.log(result);
+        response.status(200).send(label);
     	});
 }
 
 const remove = (req, response) => {
 	console.log("->delete");
-	var q = `{ "applCode": "${req.query.applCode}" }`;
-	console.log (q);
-    var query = JSON.parse(`{ "applCode": "${req.query.applCode}" }`);
+    var query = JSON.parse(`{ "applCode": "${req.query.applCode}" , "labelkey": "${req.query.labelkey}" , "labelLocale": "${req.query.labelLocale}" 
+}`);
+
     database.getDb().collection("lables").deleteMany(query, function(err, result) {
         if (err) throw err;
-        console.log(result);
-        response.status(201).end();
+        //console.log(result);
+        response.status(200).end();
     	});
 }
 

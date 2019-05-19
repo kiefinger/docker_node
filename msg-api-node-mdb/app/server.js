@@ -20,7 +20,7 @@ function initialize() {
         httpServer.listen (web_config.port)
         .on ('listening', () => {
             console.log(`Web Server listening on localhost: ${web_config.port}`);
-            resolve();
+            resolve(app);
         })
         .on('error', err => {
             reject(err);

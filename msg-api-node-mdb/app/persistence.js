@@ -24,7 +24,7 @@ async function initialize() {
 		  console.log ( db );
 		  db_g = db;
 		  dbo = db;
-		  console.log ( dbo );
+		  //console.log ( dbo );
 	});
 
     console.log(`Connected to ${url}`);
