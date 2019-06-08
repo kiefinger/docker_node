@@ -25,4 +25,4 @@ commit;
 docker
 
 build
-docker image --tag utl-api-node-mdb:latest .
+docker image build --tag msg-api-node-mdb:latest .

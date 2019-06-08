@@ -1,10 +1,10 @@
-   x2b:
+   msg-api-node-2:
       build: .
       user: "node"
-      working_dir: /home/node/x2b
+      working_dir: /home/node/msg-api-node-2
       environment:
         - NODE_ENV=production
       volumes:
-        - ./:/home/node/x2b
+        - ./:/home/node/msg-api-node-2
       ports:
-        - 81:1337
+        - 1337:1337
