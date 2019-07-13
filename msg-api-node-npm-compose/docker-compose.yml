@@ -1,0 +1,20 @@
+version: '3'
+services:
+   node:
+      image: "node:8.16.0"
+      user: "node"
+      working_dir: /home/node/x2n
+      environment:
+        - NODE_ENV=production
+      volumes:
+        - ./:/home/node/x2n
+      ports:
+        - 80:1337
+      expose:
+        - "1337"
+      command: "npm start"
+      networks:
+        - webnet
+networks:
+  webnet:
+

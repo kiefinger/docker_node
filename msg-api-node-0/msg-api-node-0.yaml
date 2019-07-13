@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: msg-api-node-0
+spec:
+   selector:
+      matchLabels:
+        run: load-balancer-example
+   replicas: 1
+   template:
+     metadata:
+       labels:
+         run: load-balancer-example
+     spec:
+       containers:
+         - name: msg-api-node-0
+           image: kiefinger/msg-api-node-0:latest
+           resources:
+             requests:
+               memory: "1Mi"
+           ports:
+             - containerPort: 8080
+               protocol: TCP
+

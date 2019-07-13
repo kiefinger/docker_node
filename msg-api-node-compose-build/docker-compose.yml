@@ -1,0 +1,10 @@
+   msg-api-node-compose-build:
+      build: .
+      user: "node"
+      working_dir: /home/node/app
+      environment:
+        - NODE_ENV=production
+      volumes:
+        - ./:/home/node/app
+      ports:
+        - 1337:1337

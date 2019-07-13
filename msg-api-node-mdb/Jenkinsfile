@@ -6,6 +6,11 @@ pipeline {
 		}
 	}
 	stages {
+		stage ('Build' ) {
+			steps {
+			def customImage = docker.build ("msg-api-node-mdb:latest")
+			}
+		}
 		stage ('Test' ) {
 			steps {
 				sh 'node --version'

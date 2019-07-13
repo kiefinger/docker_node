@@ -1,0 +1,10 @@
+
+build
+docker image build --tag x2a:latest .
+
+run
+docker run -p 1337:1337 -it --rm -v "$(pwd)"/app:/app x2a:latest 
+
+test
+curl -d '{"a":"a"}' localhost:1337 
+

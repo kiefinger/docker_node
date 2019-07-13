@@ -1,0 +1,10 @@
+
+build
+docker image --tag msg-api-node-3:latest .
+
+run
+docker run -p 1337:1337 -it --rm -v "$(pwd)"/app:/app msg-api-node-3:latest 
+
+test
+curl -d '{"a":"a"}' localhost:1337 
+
